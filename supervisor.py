@@ -10,10 +10,12 @@ from datetime import datetime
 
 PYTHON_BIN = sys.executable
 
+PORT = os.getenv("PORT", "8000")
+
 SERVICES = [
     {
         "name": "FastAPI Server",
-        "command": [PYTHON_BIN, "-m", "uvicorn", "main:app", "--port", "8000"]
+        "command": [PYTHON_BIN, "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", str(PORT)]
     },
     {
         "name": "Telegram Bot",
