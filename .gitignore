@@ -1,0 +1,7 @@
+.env
+database.db
+clientes_diarios.txt
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
